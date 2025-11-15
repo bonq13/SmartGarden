@@ -1,3 +1,5 @@
+[![CI](https://github.com/bonq13/SmartGarden/actions/workflows/dotnet.yml/badge.svg)](https://github.com/bonq13/SmartGarden/actions/workflows/dotnet.yml)
+
 # SmartGarden Console – Intelligent Garden Simulator
 
 A C# console app simulating a smart garden with plants, weather, sensors, and AI irrigation.
