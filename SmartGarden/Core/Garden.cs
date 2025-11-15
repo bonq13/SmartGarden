@@ -6,6 +6,7 @@ public class Garden
     private readonly ISensor<double> _soilSensor;
     private readonly IWeather _weather;
     private readonly List<string> _log;
+    public IReadOnlyList<string> Log => _log;
 
     private int _irrigatedToday;
 
@@ -70,6 +71,7 @@ public class Garden
             $"Moisture: {p.SoilMoisture:F1}%, " +
             $"Needs water: {p.NeedsWater()}" 
         );
+        _log.Add("Status requested");
         return string.Join("\n", plantLines);
     }
 
@@ -82,7 +84,9 @@ public class Garden
         int thirsty = _plants.Count(p => p.NeedsWater());
 
         return $"""
-                === DAILY RAPORT
+                
+                
+                === DAILY REPORT ===
                 Total plants: {total}
                 Alive: {alive}
                 Dead: {dead}
